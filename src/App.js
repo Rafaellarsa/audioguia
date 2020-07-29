@@ -1,8 +1,7 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
 import AudioPlayer from 'react-h5-audio-player';
-
+import logo from './assets/logo.png';
 
 function App() {
   return (
@@ -16,11 +15,11 @@ function App() {
   />
         <a
           className="App-link"
-          href="https://reactjs.org"
+          href="https://mauc.ufc.br/pt/"
           target="_blank"
           rel="noopener noreferrer"
         >
-          Learn React
+          Site do Mauc
         </a>
       </header>
     </div>
