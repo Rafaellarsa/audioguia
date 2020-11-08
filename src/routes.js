@@ -7,7 +7,7 @@ import Player from './pages/home/App';
 const Routes = () => (
     <BrowserRouter>
         <Switch>
-            <Route exact path="/" component={Search} />
+            <Route path="/" exact component={Search} />
             <Route path="/audio" component={Player} />
         </Switch>
     </BrowserRouter>

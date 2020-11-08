@@ -1,8 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './pages/home/App';
-import Search from './pages/search/Search';
+//import Menu from './components/Menu/Menu';
 import * as serviceWorker from './serviceWorker';
 import Routes from './routes'
 
