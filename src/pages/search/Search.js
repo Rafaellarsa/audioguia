@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './Search.css';
 import logo from '../../assets/logo.png';
-import Information from './filter-json';
+import Information from '../../filter-json';
 import ReactSearchBox from 'react-search-box';
 import { Link, NavLink, Redirect, useHistory } from 'react-router-dom';
 import Routes from '../../routes';
@@ -9,8 +9,8 @@ import Routes from '../../routes';
 
 function Search () {
     const history = useHistory();
-    function handleClick() {
-      history.push("/audio");
+    function handleClick(item) {
+      history.push( `/audio/${item.key}` );
     }
 
     return (
@@ -22,10 +22,10 @@ function Search () {
 
         <ReactSearchBox
           placeholder="Insira o nome da obra"
-          value=""
+          value= ""
           data = { Information }
           callback = {record => console.log(record)}
-          onSelect = { handleClick }
+          onSelect = { (event) => handleClick(event) }
          />
 
       </div>
