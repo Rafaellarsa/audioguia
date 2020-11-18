@@ -1,13 +1,18 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-//import Menu from './components/Menu/Menu';
+import Menu from './components/Menu/Menu';
 import * as serviceWorker from './serviceWorker';
 import Routes from './routes';
 
 ReactDOM.render(
   <React.StrictMode>
-    <Routes />
+    <div id="outer-container">
+      <Menu pageWrapId={ "page-wrap" } outerContainerId={ "outer-container" } />
+      <main id="page-wrap">
+        <Routes />
+      </main>
+    </div>
   </React.StrictMode>,
   document.getElementById('root')
 );

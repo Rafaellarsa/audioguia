@@ -1,6 +1,4 @@
-import { library } from '@fortawesome/fontawesome-svg-core'
-import { fab } from '@fortawesome/free-brands-svg-icons'
-import { faBarsSolid } from '@fortawesome/free-solid-svg-icons'
+import {elastic as MenuProp} from 'react-burger-menu';
 import React, { Component } from 'react';
 import './Menu.css';
 import bars from '../../assets/bars-solid.svg';
@@ -11,31 +9,20 @@ class Menu extends Component {
         this.options = React.createRef();
     }
 
-    showMenu = async () => {
-        var x = await this.options.current;
-        if (x.style.display === "block") {
-          x.style.display = "none";
-        } else {
-          x.style.display = "block";
-        }
-      }
+
 
     render() {
     return(
-    <div id="menu">
-        <div className="options" ref={this.options} id="options">
-            <a href="/index.html">Destaques</a>
-            <a href="/quem-somos.html">Quem somos?</a>
-            <a href="/producoes.html">Produções</a>
-            <a href="/videos.html">Vídeos</a>
-            <a href="/referencias.html">Referências</a>
-            <a href="/comissao.html" class="active">Comissão</a>
-            <a href="/contato.html">Contato</a>
-        </div>
-        <a href="javascript:void(0);" className="icon" onclick= { this.showMenu }>
-            <FontAwesomeIcon icon={faBarsSolid} />
-        </a>
-    </div>
+    <MenuProp>
+            <a href="/index.html" className="menu-item">Destaques</a>
+            <a href="/quem-somos.html" className="menu-item">Quem somos?</a>
+            <a href="/producoes.html" className="menu-item">Produções</a>
+            <a href="/videos.html" className="menu-item">Vídeos</a>
+            <a href="/referencias.html" className="menu-item">Referências</a>
+            <a href="/comissao.html" className="menu-item">Comissão</a>
+            <a href="/contato.html" className="menu-item">Contato</a>
+        <a href="" className="menu-item--small" onclick= { this.showSettings }>Menu</a>
+    </MenuProp>
     )
     }
 }
