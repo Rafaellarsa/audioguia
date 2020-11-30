@@ -14,7 +14,7 @@
 }*/
 
 .App-header {
-  background-color: #ffffff;
+  background-color: #ea9911;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -26,4 +26,8 @@
 
 .App-link {
   color: #016298;
+}
+.rhap_container {
+  background-color: #ea9911 !important;
+  box-shadow: none !important;
 }
