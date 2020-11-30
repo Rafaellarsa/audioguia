@@ -31,3 +31,19 @@
   background-color: #ea9911 !important;
   box-shadow: none !important;
 }
+
+.rhap_main-controls-button, .rhap_volume-button, .rhap_repeat-button {
+  color: #7f4c34 !important;
+}
+
+.rhap_time {
+  color: #ffffff !important;
+}
+
+.rhap_volume-indicator, .rhap_progress-indicator {
+  background-color: #ffffff !important;
+}
+
+.rhap_progress-filled {
+  background-color: #7f4c34 !important;
+}

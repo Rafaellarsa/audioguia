@@ -13,23 +13,10 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
+        {/* <Link className="App-link" to="/">Voltar</Link> */}
         <img src={logo} className="App-logo" alt="logo" />
         <h1></h1>
         <AudioPlayer src={audioTeste} onPlay={e => console.log("onPlay")}/>
-        <Link
-          className="App-link"
-          to="/"
-        >
-          Voltar
-        </Link>
-        <a
-          className="App-link"
-          href="https://mauc.ufc.br/pt/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Site do Mauc
-        </a>
       </header>
     </div>
   );
