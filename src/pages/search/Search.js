@@ -10,7 +10,7 @@ import Routes from '../../routes';
 function Search () {
     const history = useHistory();
     function handleClick(item) {
-      history.push( `/audio/${item.key}` );
+      history.push( `/audio/${item.key}`, { item });
     }
 
     return (

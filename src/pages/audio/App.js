@@ -1,20 +1,22 @@
 import React, { Component } from 'react';
 import './App.css';
 import AudioPlayer from 'react-h5-audio-player';
+import 'react-h5-audio-player/lib/styles.css';
+import 'react-h5-audio-player/lib/styles.less';
 import logo from '../../assets/logo.png';
-import audioTeste from '../../assets/audios/Limon y sal/02-Me voy.flac';
 import Information from '../../filter-json';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 
 function App() {
+  const { state } = useLocation();
 
   return (
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
-        <h1></h1>
+        <h1>{ state.item.nome }</h1>
         <AudioPlayer
-    src={audioTeste}
+    src={ process.env.PUBLIC_URL + '/audios/' + `${state.item.key}` + '.mp3' }
     onPlay={e => console.log("onPlay")}
   />
         <Link
