@@ -1,10 +1,9 @@
-import React, { Component } from 'react';
+import React from 'react';
 import './App.css';
 import AudioPlayer from 'react-h5-audio-player';
 import 'react-h5-audio-player/lib/styles.css';
 import 'react-h5-audio-player/lib/styles.less';
 import logo from '../../assets/logo.png';
-import Information from '../../filter-json';
 import { Link, useLocation } from 'react-router-dom';
 
 function App() {
